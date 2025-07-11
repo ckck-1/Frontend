@@ -1,0 +1,80 @@
+<!--added some comments for description-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind custom color config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#051333', // Deep blue for all borders and buttons
+                        google: '#fff',
+                        facebook: '#051333', // Use same color for Facebook for consistency
+                        accent: '#051333', // Use same color for accent
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome for social icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom border style for outer container -->
+    <style>
+        .unified-border {
+            border-width: 16px;
+            border-color: #051333;
+            border-radius: 0px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <!-- Main centered container with thick border -->
+    <div class="unified-border bg-white shadow-xl max-w-md w-full mx-auto mt-16 p-0">
+        <!-- Inner container with padding and rounded corners -->
+        <div class="p-10 rounded-lg">
+            <!-- Title -->
+            <div class="text-3xl font-extrabold mb-8 text-center text-primary drop-shadow">Sign in</div>
+            <!-- Login form -->
+            <form class="space-y-6">
+                <!-- Email input -->
+                <input type="email" class="w-full px-4 py-[10px] rounded-xl border border-primary focus:border-primary focus:ring-2 focus:ring-primary/40 outline-none transition-all hover:ring-2 hover:ring-primary/40" placeholder="Email" required>
+                <!-- Password input -->
+                <input type="password" class="w-full px-4 py-[10px] rounded-xl border border-primary focus:border-primary focus:ring-2 focus:ring-primary/40 outline-none transition-all hover:ring-2 hover:ring-primary/40" placeholder="Password" required>
+                <!-- Remember password checkbox -->
+                <div class="flex items-center mb-2">
+                    <input type="checkbox" id="rememberCheck" class="rounded border-primary text-primary focus:ring-primary">
+                    <label for="rememberCheck" class="ml-2 text-gray-700">Remember password</label>
+                </div>
+                <!-- Buttons and divider -->
+                <div class="flex flex-col gap-3 mt-4 w-full">
+                    <!-- Login button -->
+                    <button type="submit" class="w-full bg-primary text-white py-2 rounded-xl font-semibold text-lg hover:bg-gray-900 transition-colors shadow">LOGIN</button>
+                    <!-- Divider with 'or' -->
+                    <div class="flex items-center my-4">
+                        <div class="flex-grow h-px bg-gray-300"></div>
+                        <span class="mx-3 text-gray-500">or</span>
+                        <div class="flex-grow h-px bg-gray-300"></div>
+                    </div>
+                    <!-- Google login button -->
+                    <button type="button" class="flex items-center justify-center w-full bg-primary border border-primary text-white py-2 rounded-xl font-semibold text-lg hover:bg-gray-900 transition-colors">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google" class="h-5 w-5 mr-2">
+                        SIGN IN WITH GOOGLE
+                    </button>
+                    <!-- Facebook login button -->
+                    <button type="button" class="flex items-center justify-center w-full bg-primary text-white py-2 rounded-xl font-semibold text-lg hover:bg-gray-900 transition-colors">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook" class="h-5 w-5 mr-2">
+                        SIGN IN WITH FACEBOOK
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html> 
